@@ -29,6 +29,9 @@
                                                 <buttonConfiguration key="configuration" style="tinted" title="Card 1">
                                                     <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="pressBtn1ToAnimate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B16-c8-88E"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-o7-W1M">
                                                 <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="166.66666666666666"/>
@@ -77,22 +80,22 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kDF-iI-wsR">
-                                <rect key="frame" x="150" y="584" width="93" height="57"/>
+                                <rect key="frame" x="121.66666666666669" y="620" width="150" height="97"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="p08-yQ-PzP"/>
+                                    <constraint firstAttribute="height" constant="100" id="IQh-2w-dQw"/>
+                                    <constraint firstAttribute="width" constant="150" id="gKr-fO-llH"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kDF-iI-wsR" firstAttribute="top" secondItem="OKe-BX-mDf" secondAttribute="bottom" constant="150" id="4dX-F7-61K"/>
+                            <constraint firstItem="kDF-iI-wsR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EQg-BA-tgn"/>
                             <constraint firstItem="OKe-BX-mDf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fyj-fa-3jm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kDF-iI-wsR" secondAttribute="bottom" constant="100" id="Wzz-9D-88p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OKe-BX-mDf" secondAttribute="trailing" constant="20" id="bOd-cE-tjw"/>
                             <constraint firstItem="OKe-BX-mDf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="r8R-20-dh2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kDF-iI-wsR" secondAttribute="trailing" constant="150" id="s37-v8-35p"/>
-                            <constraint firstItem="kDF-iI-wsR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="wA6-Xv-ndH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -107,33 +110,37 @@
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="QZ6-A1-FXK">
+        <!--My Table View-->
+        <scene sceneID="U0z-vK-uv2">
             <objects>
-                <tableViewController id="9RS-Bw-QtW" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="07j-Es-12h">
+                <tableViewController id="qJd-RL-Htk" customClass="MyTableView" customModule="UIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="K22-eA-s98">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pgj-TK-wtE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Mycell" id="DgF-vd-t26">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pgj-TK-wtE" id="MO1-Ex-LPt">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DgF-vd-t26" id="fXc-y6-ppf">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="9RS-Bw-QtW" id="EPe-Xc-W8x"/>
-                            <outlet property="delegate" destination="9RS-Bw-QtW" id="vyI-WI-Pil"/>
+                            <outlet property="dataSource" destination="qJd-RL-Htk" id="WVC-zU-D0F"/>
+                            <outlet property="delegate" destination="qJd-RL-Htk" id="roo-QJ-1L2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="K22-eA-s98" id="bTh-Ap-J32"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o8P-ux-3B4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3Z-y4-ULz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824" y="4"/>
+            <point key="canvasLocation" x="1253" y="22"/>
         </scene>
     </scenes>
     <resources>
